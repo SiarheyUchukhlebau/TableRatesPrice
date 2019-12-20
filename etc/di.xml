@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageWorx. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugins -->
+    <!-- Fixes magento's core bug -->
+    <type name="Magento\OfflineShipping\Model\Carrier\Tablerate">
+        <plugin name="change_table_rate_price"
+                type="Vendor\TableRatesPrice\Plugin\ChangeRatesPrice"
+                sortOrder="10"
+                disabled="false"/>
+    </type>
+</config>
